@@ -43,20 +43,6 @@
   column-gap: 1.25rem;
 }
 
-/* ===== RESPONSIVE FIX FOR GRID ===== */
-@media (max-width: 1024px) {
-  .gallery-grid {
-    columns: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery-grid {
-    columns: 1;
-  }
-}
-
-/* Item */
 .gallery-item {
   break-inside: avoid;
   position: relative;
@@ -80,23 +66,11 @@
   transition: transform 0.5s ease;
 }
 
-/* Responsive image heights */
 .gallery-item--normal img { height: 260px; }
 .gallery-item--wide img   { height: 220px; }
 .gallery-item--tall img   { height: 380px; }
 
-/* Mobile fix */
-@media (max-width: 600px) {
-  .gallery-item--normal img,
-  .gallery-item--wide img,
-  .gallery-item--tall img {
-    height: 220px;
-  }
-}
-
-.gallery-item:hover img {
-  transform: scale(1.06);
-}
+.gallery-item:hover img { transform: scale(1.06); }
 
 /* Overlay */
 .gallery-overlay {
@@ -111,9 +85,7 @@
   transition: opacity 0.35s ease;
 }
 
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
 
 .gallery-cat {
   font-size: 0.72rem;
@@ -144,7 +116,6 @@
   padding: 3rem;
 }
 
-/* CTA */
 .gallery-cta {
   text-align: center;
   margin-top: 3.5rem;
@@ -168,15 +139,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
   animation: fadeUp 0.25s ease;
-}
-
-/* mobile fix */
-@media (max-width: 600px) {
-  .lightbox {
-    padding: 0.5rem;
-  }
 }
 
 .lightbox-close {
@@ -197,10 +161,7 @@
   justify-content: center;
 }
 
-.lightbox-close:hover {
-  background: var(--gold);
-  color: var(--deep);
-}
+.lightbox-close:hover { background: var(--gold); color: var(--deep); }
 
 .lightbox-content {
   max-width: 900px;
@@ -217,20 +178,12 @@
   display: block;
 }
 
-/* mobile fix */
-@media (max-width: 600px) {
-  .lightbox-content img {
-    max-height: 60vh;
-  }
-}
-
 .lightbox-info {
   background: var(--deep);
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .lightbox-info span {
@@ -248,4 +201,16 @@
   font-family: var(--font-display);
   font-size: 1.2rem;
   color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gallery-grid { columns: 2; }
+}
+
+@media (max-width: 580px) {
+  .gallery-grid { columns: 1; }
+  .gallery-item--normal img,
+  .gallery-item--wide img,
+  .gallery-item--tall img { height: 250px; }
 }
