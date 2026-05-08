@@ -8,11 +8,13 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float"
+      aria-label="Chat on WhatsApp"
     >
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
         alt="WhatsApp"
         className="whatsapp-icon"
+        loading="lazy"
       />
     </a>
   );

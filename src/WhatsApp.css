@@ -15,11 +15,53 @@
   text-decoration: none;
 }
 
+/* hover only for desktop */
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
 
+/* icon */
 .whatsapp-icon {
   width: 38px;
   height: 38px;
+}
+
+/* ===== RESPONSIVE FIX ===== */
+
+/* tablets */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 58px;
+    height: 58px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .whatsapp-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000; /* ensures always above everything */
+  }
+
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* optional: reduce hover effect on mobile (avoid weird tap zoom) */
+@media (hover: none) {
+  .whatsapp-float:hover {
+    transform: none;
+  }
 }

@@ -6,78 +6,18 @@ import WhatsAppButton from '../WhatsApp';
 const categories = ['All', 'KIA', 'MG', 'MAHINDRA', 'TATA', 'TOYOTA'];
 
 const images = [
-  {
-    src: '/car.jpeg',
-    title: 'MG Windsor 53KW EV',
-    cat: 'MG',
-    size: 'wide',
-  },
-  {
-    src: '/car1.jpeg',
-    title: 'KIA Carens',
-    cat: 'KIA',
-    size: 'wide',
-  },
-  {
-    src: '/car2.jpeg',
-    title: 'Mahindra Marrazo',
-    cat: 'MAHINDRA',
-    size: 'normal',
-  },
-  {
-    src: '/car3.jpeg',
-    title: 'TATA Nexon 45KW EV',
-    cat: 'TATA',
-    size: 'normal',
-  },
-  {
-    src: '/car4.jpeg',
-    title: 'TOYOTA',
-    cat: 'TOYOTA',
-    size: 'normal',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80',
-    title: 'SUV Cab',
-    cat: 'SUV',
-    size: 'normal',
-  },
-  {
-    src: '/car5.jpeg',
-    title: 'Mahindra',
-    cat: 'MAHINDRA',
-    size: 'wide',
-  },
-  {
-    src: '/car.jpeg',
-    title: 'MG',
-    cat: 'MG',
-    size: 'normal',
-  },
-  {
-    src: '/car15.png',
-    title: 'MG Windsor',
-    cat: 'MG',
-    size: 'normal',
-  },
-  {
-    src: '/car14.png',
-    title: 'Tata',
-    cat: 'TATA',
-    size: 'normal',
-  },
-  {
-    src: '/car12.png',
-    title: 'Tata',
-    cat: 'TATA',
-    size: 'normal',
-  },
-  {
-    src: '/car11.png',
-    title: 'Mahindra',
-    cat: 'MAHINDRA',
-    size: 'wide',
-  },
+  { src: '/car.jpeg', title: 'MG Windsor 53KW EV', cat: 'MG', size: 'wide' },
+  { src: '/car1.jpeg', title: 'KIA Carens', cat: 'KIA', size: 'wide' },
+  { src: '/car2.jpeg', title: 'Mahindra Marrazo', cat: 'MAHINDRA', size: 'normal' },
+  { src: '/car3.jpeg', title: 'TATA Nexon 45KW EV', cat: 'TATA', size: 'normal' },
+  { src: '/car4.jpeg', title: 'TOYOTA', cat: 'TOYOTA', size: 'normal' },
+  { src: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80', title: 'SUV Cab', cat: 'SUV', size: 'normal' },
+  { src: '/car5.jpeg', title: 'Mahindra', cat: 'MAHINDRA', size: 'wide' },
+  { src: '/car.jpeg', title: 'MG', cat: 'MG', size: 'normal' },
+  { src: '/car15.png', title: 'MG Windsor', cat: 'MG', size: 'normal' },
+  { src: '/car14.png', title: 'Tata', cat: 'TATA', size: 'normal' },
+  { src: '/car12.png', title: 'Tata', cat: 'TATA', size: 'normal' },
+  { src: '/car11.png', title: 'Mahindra', cat: 'MAHINDRA', size: 'wide' },
 ];
 
 export default function Gallery() {
@@ -85,12 +25,14 @@ export default function Gallery() {
   const [lightbox, setLightbox] = useState(null);
 
   const filtered =
-    active === 'All' ? images : images.filter((img) => img.cat === active);
+    active === 'All'
+      ? images
+      : images.filter((img) => img.cat === active);
 
   return (
     <div className="gallery-page">
 
-      {/* Hero */}
+      {/* HERO */}
       <section className="page-hero">
         <h1>Our <span>Fleet</span></h1>
         <p>Comfortable, reliable vehicles for all your travel needs</p>
@@ -102,10 +44,11 @@ export default function Gallery() {
         </nav>
       </section>
 
-      {/* Filter tabs */}
+      {/* SECTION */}
       <section className="gallery-section">
         <div className="container">
 
+          {/* FILTERS */}
           <div className="gallery-filters fade-up">
             {categories.map((cat) => (
               <button
@@ -118,7 +61,7 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Masonry grid */}
+          {/* GRID */}
           <div className="gallery-grid">
             {filtered.map((img, i) => (
               <div
@@ -134,11 +77,11 @@ export default function Gallery() {
                   <h3>{img.title}</h3>
                   <span className="gallery-zoom">⤢ View</span>
                 </div>
-
               </div>
             ))}
           </div>
 
+          {/* EMPTY STATE */}
           {filtered.length === 0 && (
             <div className="no-results">
               No vehicles in this category yet.
@@ -148,9 +91,12 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Lightbox */}
+      {/* LIGHTBOX */}
       {lightbox && (
-        <div className="lightbox" onClick={() => setLightbox(null)}>
+        <div
+          className="lightbox"
+          onClick={() => setLightbox(null)}
+        >
 
           <button
             className="lightbox-close"
@@ -169,12 +115,12 @@ export default function Gallery() {
               <span>{lightbox.cat}</span>
               <h3>{lightbox.title}</h3>
             </div>
-
           </div>
+
         </div>
       )}
 
-      {/* WhatsApp Button */}
+      {/* WHATSAPP */}
       <WhatsAppButton />
 
     </div>

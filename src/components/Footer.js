@@ -6,6 +6,7 @@ export default function Footer() {
   return (
     <footer className="footer">
 
+      {/* KEYWORDS STRIP */}
       <div className="footer-keywords">
         <div className="keywords-scroll">
 
@@ -22,21 +23,19 @@ export default function Footer() {
             'AC Cars',
             'Corporate Travel'
           ].map((kw, i) => (
-
             <span key={i} className="kw-tag">
               {kw}
             </span>
-
           ))}
 
         </div>
       </div>
 
+      {/* MAIN FOOTER */}
       <div className="footer-main">
-
         <div className="container footer-grid">
 
-          {/* Brand */}
+          {/* BRAND */}
           <div className="footer-brand">
 
             <div className="footer-logo">
@@ -44,6 +43,7 @@ export default function Footer() {
                 src="/logo.jpeg"
                 alt="Goodday Tours and Travels"
                 className="footer-logo-img"
+                loading="lazy"
               />
             </div>
 
@@ -51,32 +51,34 @@ export default function Footer() {
               Safe, comfortable and reliable travel services — available 24/7 for local, outstation and airport transfers across Tamil Nadu.
             </p>
 
-            {/* Social Icons */}
+            {/* SOCIALS */}
             <div className="footer-socials">
 
               <a
                 href="https://instagram.com"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
                   alt="Instagram"
                   className="social-icon"
+                  loading="lazy"
                 />
               </a>
 
               <a
                 href="https://facebook.com"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
                   alt="Facebook"
                   className="social-icon"
+                  loading="lazy"
                 />
               </a>
 
@@ -84,38 +86,31 @@ export default function Footer() {
 
           </div>
 
-          {/* Quick Links */}
+          {/* QUICK LINKS */}
           <div className="footer-col">
-
             <h4>Quick Links</h4>
-
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
-
           </div>
 
-          {/* Services */}
+          {/* SERVICES */}
           <div className="footer-col">
-
             <h4>Our Services</h4>
-
             <ul>
-              <li><a href="#!">🚗 Local City Travel</a></li>
-              <li><a href="#!">🚙 Outstation Travel</a></li>
-              <li><a href="#!">✈ Airport Pickup & Drop</a></li>
-              <li><a href="#!">📅 Advance Booking</a></li>
-              <li><a href="#!">👨‍✈️ Professional Drivers</a></li>
+              <li>🚗 Local City Travel</li>
+              <li>🚙 Outstation Travel</li>
+              <li>✈ Airport Pickup & Drop</li>
+              <li>📅 Advance Booking</li>
+              <li>👨‍✈️ Professional Drivers</li>
             </ul>
-
           </div>
 
-          {/* Contact */}
+          {/* CONTACT */}
           <div className="footer-col">
-
             <h4>Get In Touch</h4>
 
             <ul className="footer-contact-list">
@@ -127,14 +122,14 @@ export default function Footer() {
               </li>
 
               <li>
-                📞
+                📞{' '}
                 <a href="tel:+917305153332">
                   +91 73051 53332
                 </a>
               </li>
 
               <li>
-                ✉
+                ✉{' '}
                 <a href="mailto:info@gooddaytoursandtravels.com">
                   info@gooddaytoursandtravels.com
                 </a>
@@ -147,17 +142,14 @@ export default function Footer() {
           </div>
 
         </div>
-
       </div>
 
-      {/* Bottom */}
+      {/* BOTTOM */}
       <div className="footer-bottom">
-
         <div className="container footer-bottom-inner">
 
           <p>
-            © 2026 Goodday Tours and Travels.
-            All rights reserved.
+            © 2026 Goodday Tours and Travels. All rights reserved.
           </p>
 
           <p>
@@ -165,7 +157,6 @@ export default function Footer() {
           </p>
 
         </div>
-
       </div>
 
     </footer>

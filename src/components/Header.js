@@ -10,62 +10,46 @@ const navLinks = [
 ];
 
 export default function Header() {
-
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
   const location = useLocation();
 
+  // scroll effect
   useEffect(() => {
-
     const onScroll = () => setScrolled(window.scrollY > 40);
-
     window.addEventListener('scroll', onScroll);
-
     return () => window.removeEventListener('scroll', onScroll);
-
   }, []);
 
+  // close menu on route change
   useEffect(() => {
     setMenuOpen(false);
   }, [location]);
 
   return (
-
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
 
       {/* Top bar */}
       <div className="header-topbar">
-
         <div className="container topbar-inner">
 
-          <div className="topbar-keywords"></div>
+          <div className="topbar-keywords" />
 
           <div className="topbar-contact">
-
-            <a
-              href="tel:+917305153332"
-              style={{
-                color: 'inherit',
-                textDecoration: 'none'
-              }}
-            >
+            <a href="tel:+917305153332">
               📞 +91 73051 53332
             </a>
 
             <span>
               ✉ info@gooddaytoursandtravels.com
             </span>
-
           </div>
 
         </div>
-
       </div>
 
       {/* Navbar */}
       <nav className="navbar">
-
         <div className="container nav-inner">
 
           {/* Logo */}
@@ -77,13 +61,10 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Links */}
+          {/* Desktop nav */}
           <ul className="nav-links">
-
             {navLinks.map(({ path, label }) => (
-
               <li key={path}>
-
                 <Link
                   to={path}
                   className={`nav-link ${
@@ -92,18 +73,12 @@ export default function Header() {
                 >
                   {label}
                 </Link>
-
               </li>
-
             ))}
-
           </ul>
 
-          {/* CTA Button */}
-          <a
-            href="tel:+917305153332"
-            className="nav-cta"
-          >
+          {/* CTA */}
+          <a href="tel:+917305153332" className="nav-cta">
             📞 Book Trip
           </a>
 
@@ -113,22 +88,18 @@ export default function Header() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-
             <span />
             <span />
             <span />
-
           </button>
 
         </div>
-
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
 
         {navLinks.map(({ path, label }) => (
-
           <Link
             key={path}
             to={path}
@@ -138,13 +109,9 @@ export default function Header() {
           >
             {label}
           </Link>
-
         ))}
 
-        <a
-          href="tel:+917305153332"
-          className="mobile-cta"
-        >
+        <a href="tel:+917305153332" className="mobile-cta">
           📞 Book a Trip
         </a>
 

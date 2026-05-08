@@ -35,21 +35,28 @@ export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
 
-  const handleChange = e =>
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+
+    // basic validation safety (optional but useful)
+    if (!form.name || !form.phone) {
+      alert("Please fill required fields");
+      return;
+    }
+
     setSubmitted(true);
   };
 
   return (
     <div className="contact-page">
 
-      {/* Hero */}
+      {/* HERO */}
       <section className="page-hero">
         <h1>Contact <span>Us</span></h1>
-
         <p>We'd love to plan your next adventure</p>
 
         <nav className="breadcrumb">
@@ -59,9 +66,8 @@ export default function ContactUs() {
         </nav>
       </section>
 
-      {/* Contact info cards */}
+      {/* INFO CARDS */}
       <section className="contact-info-section">
-
         <div className="container contact-info-grid">
 
           {[
@@ -72,14 +78,13 @@ export default function ContactUs() {
                 '4/186H, Kalaivanar Nagar West Putheri, Behind putheri Panchayat Office, Nagercoil 629001'
               ]
             },
-
             {
               icon: '📞',
               title: 'Call Us',
               lines: [
                 <a
                   href="tel:+917305153332"
-                  key="call"
+                  key="phone"
                   style={{
                     color: 'inherit',
                     textDecoration: 'none',
@@ -90,13 +95,11 @@ export default function ContactUs() {
                 </a>
               ]
             },
-
             {
               icon: '✉',
               title: 'Email Us',
               lines: ['info@gooddaytoursandtravels.com']
             },
-
             {
               icon: '🕐',
               title: 'Working Hours',
@@ -105,81 +108,52 @@ export default function ContactUs() {
                 'Sunday: 10:00 AM – 3:00 PM'
               ]
             },
-
           ].map((item, i) => (
-
             <div
               key={i}
               className="info-card fade-up"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
-
-              <span className="info-icon">
-                {item.icon}
-              </span>
-
+              <span className="info-icon">{item.icon}</span>
               <h3>{item.title}</h3>
 
-              {item.lines.map((l, j) => (
-                <p key={j}>{l}</p>
+              {item.lines.map((line, j) => (
+                <p key={j}>{line}</p>
               ))}
-
             </div>
-
           ))}
 
         </div>
-
       </section>
 
       {/* FAQ */}
       <section className="faq-section">
-
         <div className="container">
 
-          <div
-            className="section-header fade-up"
-            style={{ textAlign: 'center' }}
-          >
-
-            <p className="section-label">
-              Common Questions
-            </p>
-
+          <div className="section-header fade-up" style={{ textAlign: 'center' }}>
+            <p className="section-label">Common Questions</p>
             <h2 className="section-title">
               Frequently Asked <span>Questions</span>
             </h2>
-
-            <div
-              className="divider"
-              style={{ margin: '1rem auto 3rem' }}
-            />
-
+            <div className="divider" style={{ margin: '1rem auto 3rem' }} />
           </div>
 
           <div className="faq-list">
 
             {faqs.map((faq, i) => (
-
               <div
                 key={i}
                 className={`faq-item fade-up ${openFaq === i ? 'open' : ''}`}
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-
                 <button
                   className="faq-question"
-                  onClick={() =>
-                    setOpenFaq(openFaq === i ? null : i)
-                  }
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
-
                   <span>{faq.q}</span>
-
                   <span className="faq-arrow">
                     {openFaq === i ? '−' : '+'}
                   </span>
-
                 </button>
 
                 {openFaq === i && (
@@ -187,18 +161,15 @@ export default function ContactUs() {
                     {faq.a}
                   </div>
                 )}
-
               </div>
-
             ))}
 
           </div>
 
         </div>
-
       </section>
 
-      {/* WhatsApp Button */}
+      {/* WHATSAPP */}
       <WhatsAppButton />
 
     </div>

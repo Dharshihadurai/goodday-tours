@@ -30,34 +30,36 @@ export default function Home() {
   return (
     <div className="home-page">
 
-      {/* ===== HERO ===== */}
+      {/* HERO */}
       <section className="hero">
         <div className="hero-overlay" />
         <div className="hero-content fade-up">
           <p className="section-label" style={{ color: '#e8b84b' }}>Welcome to</p>
+
           <h1 className="hero-title">
             Goodday Tours,<br />
             <span>And Travels</span>
           </h1>
+
           <p className="hero-subtitle fade-up fade-up-delay-1">
             Discover amazing destinations, unforgettable experiences, and hassle-free travel with us.
           </p>
+
           <div className="hero-buttons fade-up fade-up-delay-2">
-            <Link to="/contact" className="btn-outline" style={{ borderColor: '#fff', color: '#fff' }}>
+            <Link to="/contact" className="btn-outline">
               Book Taxi Now
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 🚀 WHATSAPP BUTTON ADDED HERE (MIDDLE OF PAGE) */}
       <WhatsAppButton />
 
-      {/* ===== STATS ===== */}
+      {/* STATS */}
       <section className="stats-strip">
         <div className="container stats-grid">
           {stats.map((s, i) => (
-            <div key={i} className="stat-item fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
+            <div key={i} className="stat-item">
               <span className="stat-num">{s.num}</span>
               <span className="stat-label">{s.label}</span>
             </div>
@@ -65,35 +67,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== DESTINATIONS ===== */}
+      {/* DESTINATIONS */}
       <section className="destinations-section">
         <div className="container">
-          <div className="section-header fade-up">
+
+          <div className="section-header">
             <h2 className="section-title">Our Travel <span>Fleet</span></h2>
             <div className="divider" />
             <p className="section-desc">
-              We offer a variety of clean and comfortable vehicles to suit your travel needs. From family trips to long-distance journeys, our fleet ensures safety, comfort, and smooth travel experience.
+              We offer a variety of clean and comfortable vehicles for safe travel.
             </p>
           </div>
 
           <div className="destinations-grid">
             {destinations.map((d, i) => (
-              <div key={i} className="dest-card fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
+              <div key={i} className="dest-card">
                 <div className="dest-img-wrap">
-                  <img src={d.img} alt={d.name} className="dest-img" />
+                  <img src={d.img} alt={d.tag} className="dest-img" />
                   <span className="dest-tag">{d.tag}</span>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* ===== SERVICES ===== */}
+      {/* SERVICES */}
       <section className="services-section">
         <div className="container">
 
-          <div className="section-header fade-up" style={{ textAlign: 'center' }}>
+          <div className="section-header" style={{ textAlign: 'center' }}>
             <p className="section-label">What We Offer</p>
             <h2 className="section-title">Our <span>Services</span></h2>
             <div className="divider" />
@@ -101,7 +105,7 @@ export default function Home() {
 
           <div className="services-grid">
             {services.map((s, i) => (
-              <div key={i} className="service-card fade-up" style={{ animationDelay: `${i * 0.12}s` }}>
+              <div key={i} className="service-card">
                 <span className="service-icon">{s.icon}</span>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
@@ -112,18 +116,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== CTA BANNER ===== */}
-      <section className="cta-banner fade-up">
+      {/* CTA */}
+      <section className="cta-banner">
         <div className="container cta-inner">
           <div>
             <h2>Ready for Your Next Adventure?</h2>
             <p>Contact us today and let's plan the perfect trip together.</p>
           </div>
+
           <div className="cta-buttons">
             <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
-            <Link to="/gallery" className="btn-outline" style={{ borderColor: '#fff', color: '#fff' }}>
-              View Gallery
-            </Link>
+            <Link to="/gallery" className="btn-outline">View Gallery</Link>
           </div>
         </div>
       </section>

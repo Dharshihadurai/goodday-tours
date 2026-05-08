@@ -4,58 +4,22 @@ import './AboutUs.css';
 import WhatsAppButton from '../WhatsApp';
 
 const values = [
-  {
-    icon: '🚕',
-    title: 'Local Travel',
-    desc: 'Quick and convenient rides within the city for your daily travel needs.'
-  },
-  {
-    icon: '🛣️',
-    title: 'Outstation Travel',
-    desc: 'Comfortable long-distance journeys with reliable and smooth service.'
-  },
-  {
-    icon: '✈️',
-    title: 'Airport Pickup & Drop',
-    desc: 'On-time airport transfers to ensure a hassle-free travel experience.'
-  },
-  {
-    icon: '🕒',
-    title: '24/7 Availability',
-    desc: 'Travel anytime with our round-the-clock service availability.'
-  },
-  {
-    icon: '📅',
-    title: 'Advance Booking',
-    desc: 'Plan your trips in advance and avoid last-minute stress.'
-  },
-  {
-    icon: '👨‍✈️',
-    title: 'Professional Drivers',
-    desc: 'Experienced drivers ensuring safety and a pleasant journey.'
-  },
-  {
-    icon: '🚗',
-    title: 'Clean Vehicles',
-    desc: 'Well-maintained vehicles for a comfortable ride.'
-  },
-  {
-    icon: '⏱️',
-    title: 'On-Time Service',
-    desc: 'Punctual pickups and drop-offs every time.'
-  },
-  {
-    icon: '📍',
-    title: 'Doorstep Pickup',
-    desc: 'Convenient pickup and drop exactly where you need.'
-  }
+  { icon: '🚕', title: 'Local Travel', desc: 'Quick and convenient rides within the city for your daily travel needs.' },
+  { icon: '🛣️', title: 'Outstation Travel', desc: 'Comfortable long-distance journeys with reliable and smooth service.' },
+  { icon: '✈️', title: 'Airport Pickup & Drop', desc: 'On-time airport transfers to ensure a hassle-free travel experience.' },
+  { icon: '🕒', title: '24/7 Availability', desc: 'Travel anytime with our round-the-clock service availability.' },
+  { icon: '📅', title: 'Advance Booking', desc: 'Plan your trips in advance and avoid last-minute stress.' },
+  { icon: '👨‍✈️', title: 'Professional Drivers', desc: 'Experienced drivers ensuring safety and a pleasant journey.' },
+  { icon: '🚗', title: 'Clean Vehicles', desc: 'Well-maintained vehicles for a comfortable ride.' },
+  { icon: '⏱️', title: 'On-Time Service', desc: 'Punctual pickups and drop-offs every time.' },
+  { icon: '📍', title: 'Doorstep Pickup', desc: 'Convenient pickup and drop exactly where you need.' }
 ];
 
 export default function AboutUs() {
   return (
     <div className="about-page">
 
-      {/* Hero */}
+      {/* HERO */}
       <section className="page-hero">
         <h1>About <span>GoodDay Travels</span></h1>
         <p>Your trusted taxi and travel partner</p>
@@ -67,15 +31,16 @@ export default function AboutUs() {
         </nav>
       </section>
 
-      {/* Our Story */}
+      {/* STORY */}
       <section className="about-story">
         <div className="container story-grid">
+
           <div className="story-images fade-up">
             <div className="story-img-main">
               <img src="/car.jpeg" alt="Travel team" />
             </div>
-            <div className="story-img-side">
 
+            <div className="story-img-side">
               <div className="story-badge">
                 <span className="badge-num">6+</span>
                 <span className="badge-text">Years of Experience</span>
@@ -84,6 +49,7 @@ export default function AboutUs() {
           </div>
 
           <div className="story-text fade-up fade-up-delay-2">
+
             <p className="section-label">Our Story</p>
 
             <h2 className="section-title">
@@ -110,53 +76,36 @@ export default function AboutUs() {
                 Book a Trip
               </Link>
             </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* Services */}
+      {/* SERVICES */}
       <section className="values-section">
-
         <div className="container">
 
-          <div
-            className="section-header"
-            style={{ textAlign: 'center' }}
-          >
-
+          <div className="section-header" style={{ textAlign: 'center' }}>
             <h2 className="section-title">
               Our <span>Services</span>
             </h2>
-
           </div>
 
           <div className="values-grid">
-
             {values.map((v, i) => (
-
-              <div
-                key={i}
-                className="value-card"
-              >
-                <span className="value-icon">
-                  {v.icon}
-                </span>
-
+              <div key={i} className="value-card">
+                <span className="value-icon">{v.icon}</span>
                 <h3>{v.title}</h3>
-
                 <p>{v.desc}</p>
-
               </div>
-
             ))}
-
           </div>
 
         </div>
-
       </section>
 
-      {/* Why Choose Us */}
+      {/* WHY SECTION */}
       <section className="why-section">
         <div className="container why-inner">
 
@@ -182,11 +131,9 @@ export default function AboutUs() {
               '🌍 Trusted travel partner for family trips',
               '🔒 100% secure payment processing',
             ].map((item, i) => (
-
               <div key={i} className="why-item">
                 {item}
               </div>
-
             ))}
 
           </div>
@@ -194,7 +141,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* WhatsApp Button */}
+      {/* WHATSAPP */}
       <WhatsAppButton />
 
     </div>
