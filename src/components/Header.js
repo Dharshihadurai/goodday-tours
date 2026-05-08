@@ -71,13 +71,13 @@ export default function Header() {
         <div className="container nav-inner">
 
           {/* Logo */}
-          <Link to="/" className="logo">
+         
             <img
               src="/logo.jpeg"
               alt="Goodday Tours and Travels"
               className="logo-img"
             />
-          </Link>
+        
 
           {/* Desktop Links */}
           <ul className="nav-links">
