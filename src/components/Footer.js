@@ -104,11 +104,11 @@ export default function Footer() {
             <h4>Our Services</h4>
 
             <ul>
-              <li><a href="#!">🚗 Local City Travel</a></li>
-              <li><a href="#!">🚙 Outstation Travel</a></li>
-              <li><a href="#!">✈ Airport Pickup & Drop</a></li>
-              <li><a href="#!">📅 Advance Booking</a></li>
-              <li><a href="#!">👨‍✈️ Professional Drivers</a></li>
+              <li>🚗 Local City Travel</li>
+              <li>🚙 Outstation Travel</li>
+              <li>✈ Airport Pickup & Drop</li>
+              <li>📅 Advance Booking</li>
+              <li>👨‍✈️ Professional Drivers</li>
             </ul>
 
           </div>

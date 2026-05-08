@@ -55,7 +55,12 @@ export default function Header() {
             >
               📞 +91 73051 53332
             </a>
-            <span>✉ info@gooddaytoursandtravels.com</span>
+           
+                
+                <a href="mailto:info@gooddaytoursandtravels.com">
+                  ✉ info@gooddaytoursandtravels.com
+                </a>
+            
           </div>
 
         </div>

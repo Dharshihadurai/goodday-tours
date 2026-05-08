@@ -94,7 +94,17 @@ export default function ContactUs() {
             {
               icon: '✉',
               title: 'Email Us',
-              lines: ['info@gooddaytoursandtravels.com']
+              lines: [  <a
+                  href="mailto:info@gooddaytoursandtravels.com"
+                  key="email"
+                  style={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  info@gooddaytoursandtravels.com
+                </a>]
             },
 
             {
@@ -131,6 +141,25 @@ export default function ContactUs() {
         </div>
 
       </section>
+
+
+            {/* Google Map */}
+      <section className="map-section">
+        <div className="container">
+          <iframe
+            title="Good Day Tours and Travels Location"
+            src="https://www.google.com/maps?q=4/186H,+Kalaivanar+Nagar+West+Putheri,+Nagercoil+629001&output=embed"
+            width="100%"
+            height="400"
+            style={{ border: 0, borderRadius: '12px' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+
+
 
       {/* FAQ */}
       <section className="faq-section">
