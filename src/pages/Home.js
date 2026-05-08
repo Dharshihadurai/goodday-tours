@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const destinations = [
-  { tag: 'Morris Garages', img: '/car.jpeg' },
+  { tag: '', img: '/car.jpeg' },
   { tag: 'MG Windsor', img: '/car15.png' },
   { tag: 'Tata', img: '/car14.png' },
   { tag: 'KIA', img: '/car1.jpeg' },
