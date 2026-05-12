@@ -79,6 +79,7 @@ export default function ContactUs() {
               lines: [
                 <a
                   href="tel:+917305153332"
+                  href="tel:+917305153332"
                   key="call"
                   style={{
                     color: 'inherit',
@@ -86,27 +87,43 @@ export default function ContactUs() {
                     fontWeight: 'bold'
                   }}
                 >
-                  +91 7305153332
+                  +917305153332
+                    +919342653332
                 </a>
+                
               ]
             },
+{
+  icon: '✉',
+  title: 'Email Us',
+  lines: [
+    <>
+      <a
+        href="mailto:info@gooddaytoursandtravels.com"
+        style={{
+          color: 'inherit',
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          display: 'block'
+        }}
+      >
+        info@gooddaytoursandtravels.com
+      </a>
 
-            {
-              icon: '✉',
-              title: 'Email Us',
-              lines: [  <a
-                  href="mailto:info@gooddaytoursandtravels.com"
-                  key="email"
-                  style={{
-                    color: 'inherit',
-                    textDecoration: 'none',
-                    fontWeight: 'bold'
-                  }}
-                >
-                  info@gooddaytoursandtravels.com
-                </a>]
-            },
-
+      <a
+        href="mailto:Gooddaytoursandtravels@gmail.com"
+        style={{
+          color: 'inherit',
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          display: 'block'
+        }}
+      >
+        Gooddaytoursandtravels@gmail.com
+      </a>
+    </>
+  ]
+},
             {
               icon: '🕐',
               title: 'Working Hours',

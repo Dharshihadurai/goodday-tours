@@ -72,9 +72,10 @@ export default function AboutUs() {
             </p>
 
             <div style={{ marginTop: '2rem' }}>
-              <Link to="/contact" className="btn-primary">
-                Book a Trip
-              </Link>
+              <a href="tel:+917305153332" className="btn-primary">
+             Book Trip
+          </a>
+              
             </div>
 
           </div>

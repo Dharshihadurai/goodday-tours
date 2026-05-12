@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const destinations = [
-  { tag: 'Morris Garages', img: '/car.jpeg' },
-  { tag: 'MG Windsor', img: '/car15.png' },
-  { tag: 'Tata', img: '/car14.png' },
+  { tag: 'MG Windsor', img: '/car.jpeg' },
+  { tag: 'Tata Nexon', img: '/car3.jpeg' },
   { tag: 'KIA', img: '/car1.jpeg' },
   { tag: 'Mahindra', img: '/car5.jpeg' },
   { tag: 'Toyota', img: '/car4.jpeg' },
@@ -43,9 +42,10 @@ export default function Home() {
             Discover amazing destinations, unforgettable experiences, and hassle-free travel with us.
           </p>
           <div className="hero-buttons fade-up fade-up-delay-2">
-            <Link to="/contact" className="btn-outline" style={{ borderColor: '#fff', color: '#fff' }}>
+            <a href="tel:+917305153332" className="btn-outline" style={{ borderColor: '#fff', color: '#fff' }}>
               Book Taxi Now
-            </Link>
+            </a>
+          
           </div>
         </div>
       </section>

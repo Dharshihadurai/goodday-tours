@@ -36,12 +36,7 @@ const images = [
     cat: 'TOYOTA',
     size: 'normal',
   },
-  {
-    src: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80',
-    title: 'SUV Cab',
-    cat: 'SUV',
-    size: 'normal',
-  },
+ 
   {
     src: '/car5.jpeg',
     title: 'Mahindra',
@@ -66,12 +61,7 @@ const images = [
     cat: 'TATA',
     size: 'normal',
   },
-  {
-    src: '/car12.png',
-    title: 'Tata',
-    cat: 'TATA',
-    size: 'normal',
-  },
+  
   {
     src: '/car11.png',
     title: 'Mahindra',
